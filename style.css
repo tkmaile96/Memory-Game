@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./NarutoShippuden/Team7.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+
+}
+h1{
+    color:#000
+}
+.wrapper{
+
+    height: 100vh;
+    margin: 30px auto 100px;
+}
+.section{
+    margin: 100px auto 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 4rem);
+    grid-template-rows: repeat(6, 4rem);
+    grid-gap: 1rem;
+    perspective: 800px;
+    cursor: pointer;
+}
+@media (max-width:375px){
+    .sectiion{
+        display: grid;
+        grid-template-columns: repeat(4, 2rem);
+        grid-template-rows: repeat(8, 2rem);
+        grid-gap: 1rem;
+        cursor: pointer;
+    }
+}
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition:  all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+.face,
+.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+.back{
+    background-color:#aa0c14;
+    backface-visibility: hidden;
+}
+.toggleCard{
+   transform: rotateY(180deg);
+}
+.timer {
+position: absolute;
+color: goldenrod;
+font-size: 3.1rem;
+font-weight: bolder;
+align-items: center;
+justify-items: center;
+}
